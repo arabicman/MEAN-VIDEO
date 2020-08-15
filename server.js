@@ -14,9 +14,9 @@ app.use(express.static(path.join(__dirname,'dist')));
 app.use(bodyParser.urlencoded({extended:true}))
 
 //parses the text as json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-//localhost:3000/api
+
 app.use('/api',api)
 
 app.get('*', (req, res)=>{
